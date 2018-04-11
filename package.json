@@ -1,0 +1,24 @@
+{
+  "name": "koa-njk",
+  "version": "1.0.0",
+  "description": "A Koa middleware for Nunjucks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalldie/koa-njk.git"
+  },
+  "keywords": [
+    "koa",
+    "kunjucks",
+    "template"
+  ],
+  "author": "shalldie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shalldie/koa-njk/issues"
+  },
+  "homepage": "https://github.com/shalldie/koa-njk#readme"
+}
