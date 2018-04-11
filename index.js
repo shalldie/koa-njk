@@ -3,7 +3,7 @@ const nunjucks = require('nunjucks');
 /**
  * nunjucks 中间件
  * 
- * @param {any} path 模板根目录路径
+ * @param {string} path 模板根目录路径
  * @param {string} [ext='.html'] 模板扩展名
  * @param {any} [config={}] nunjucks 配置
  * @returns {Function}
