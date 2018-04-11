@@ -14,3 +14,15 @@ declare module 'koa' {
         render: (view: string, context?: any) => Promise<string>
     }
 }
+
+/**
+ * nunjucks 中间件
+ * 
+ * @param {string} path 模板根目录路径
+ * @param {string} [ext='.html'] 模板扩展名。 default: `.html`
+ * @param {any} [config={}] nunjucks 的配置。default: `{}`
+ * @returns {Function}
+ */
+declare function koaNjk(path: string, ext?: string, config?: {}): Function;
+
+export = koaNjk;
