@@ -19,7 +19,7 @@ module.exports = (path, ext = '.html', config = {}) => {
                         reject(err);
                         return;
                     }
-                    ctx.type = 'html';
+                    ctx.type = 'text/html';
                     ctx.body = content;
                     resolve(content);
                 });
