@@ -1,4 +1,5 @@
-import { BaseContext } from 'koa';
+import Koa, { BaseContext } from 'koa';
+import { ComposedMiddleware } from 'koa-compose';
 
 declare module 'koa' {
     interface BaseContext {
@@ -23,6 +24,6 @@ declare module 'koa' {
  * @param {any} [config={}] nunjucks 的配置。default: `{}`
  * @returns {Function}
  */
-declare function koaNjk(path: string, ext?: string, config?: {}): Function;
+declare function koaNjk(path: string, ext?: string, config?: {}): ComposedMiddleware<Koa.Context>;
 
 export = koaNjk;
