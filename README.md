@@ -1,5 +1,7 @@
 # koa-njk
 
+[![NPM version](https://img.shields.io/npm/v/koa-njk.svg)](https://www.npmjs.com/package/koa-njk)
+
 A Koa middleware for Nunjucks.
 Koa2 的一个 Nunjucks 的中间件。
 
