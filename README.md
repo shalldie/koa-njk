@@ -1,6 +1,6 @@
 # koa-njk
 
-A Koa middleware for Nunjucks.  
+A Koa middleware for Nunjucks.
 Koa2 的一个 Nunjucks 的中间件。
 
 # Installation
@@ -19,11 +19,14 @@ app.use(
      * @param {string} path 模板根目录路径。root directory of views.
      * @param {string} [ext='.html'] 模板扩展名。extension of views'.
      * @param {any} [config={}] nunjucks 配置. Nunjucks' config.
+     * @param {Environment:void} [fn=env => {}] 对于 Environment 的自定义扩展回调。extension callback to Environment instance.
      * @returns {Function}
      */
     koaNjk(path.join(__dirname, 'views'), '.html', {
         autoescape: true,
         ...
+    }, env => {
+        // add filters and extensions here
     })
 );
 

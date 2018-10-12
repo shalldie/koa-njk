@@ -2,14 +2,16 @@ const nunjucks = require('nunjucks');
 
 /**
  * nunjucks 中间件
- * 
+ *
  * @param {string} path 模板根目录路径
  * @param {string} [ext='.html'] 模板扩展名
  * @param {any} [config={}] nunjucks 配置
+ * @param {Environment:void} [fn=env => {}] 对于 Environment 的自定义扩展回调
  * @returns {Function}
  */
-module.exports = (path, ext = '.html', config = {}) => {
+module.exports = (path, ext = '.html', config = {}, fn = env => {}) => {
     const env = nunjucks.configure(path, config);
+    fn(env);
     return async (ctx, next) => {
         ctx.render = async (view, context) => {
             const data = Object.assign({}, ctx.state, context);
