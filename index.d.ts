@@ -23,7 +23,7 @@ declare module 'koa' {
  * @param {string} path 模板根目录路径
  * @param {string} [ext='.html'] 模板扩展名。 default: `.html`
  * @param {any} [config={}] nunjucks 的配置。default: `{}`
- * @param {Environment:void} [fn=env => {}] 对于 Environment 的自定义扩展回调。default: `void`
+ * @param {Function} [fn=env => {}] 对于 Environment 的自定义扩展回调。default: `void`
  * @returns {Function}
  */
 declare function koaNjk(path: string, ext?: string, config?: {}, fn?: (env: Environment) => void): ComposedMiddleware<Koa.Context>;

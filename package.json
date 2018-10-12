@@ -1,6 +1,6 @@
 {
   "name": "koa-njk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Koa middleware for Nunjucks",
   "main": "index.js",
   "scripts": {

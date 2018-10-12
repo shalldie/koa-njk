@@ -6,7 +6,7 @@ const nunjucks = require('nunjucks');
  * @param {string} path 模板根目录路径
  * @param {string} [ext='.html'] 模板扩展名
  * @param {any} [config={}] nunjucks 配置
- * @param {Environment:void} [fn=env => {}] 对于 Environment 的自定义扩展回调
+ * @param {Function} [fn=env => {}] 对于 Environment 的自定义扩展回调
  * @returns {Function}
  */
 module.exports = (path, ext = '.html', config = {}, fn = env => {}) => {
